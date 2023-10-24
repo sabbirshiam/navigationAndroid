@@ -21,13 +21,14 @@ class DashboardDetailsFragment : Fragment(R.layout.fragment_dashboard_details) {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DashboardDetailsViewModel::class.java)
+        viewModel = ViewModelProvider(this)[DashboardDetailsViewModel::class.java]
         // TODO: Use the ViewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val type = args.typeName
-        view.findViewById<TextView>(R.id.detailsId).text = "data:: data $type"
+        val id = args.userId
+        view.findViewById<TextView>(R.id.detailsId).text = "data type:: $type userId:: $id"
     }
 }

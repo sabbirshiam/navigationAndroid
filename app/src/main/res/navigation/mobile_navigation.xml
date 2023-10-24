@@ -27,12 +27,16 @@
             <deepLink
                 android:id="@+id/deepLink"
                 android:autoVerify="true"
-                app:uri="https://www.myapp.com/dashboarddetails?type={typeName}" />
+                app:uri="https://www.myapp.com/dashboarddetails/{user_id}?type={typeName}" />
             <argument
                 android:name="typeName"
+                android:defaultValue="@null"
                 app:argType="string"
-                app:nullable="true"
-                android:defaultValue="@null" />
+                app:nullable="true" />
+            <argument
+                android:name="user_id"
+                android:defaultValue="-1"
+                app:argType="integer" />
         </fragment>
         <fragment
             android:id="@+id/navigation_dashboard"
