@@ -17,7 +17,7 @@
         android:name="com.dosthim.androidnavigation.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <navigation android:id="@+id/navigation"
+    <navigation android:id="@+id/navigation_dashboard_graph"
         app:startDestination="@id/navigation_dashboard">
         <fragment
             android:id="@+id/dashboardDetailsFragment"
